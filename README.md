@@ -35,7 +35,10 @@ A responsive, web-based music player built using **HTML**, **CSS**, and **JavaSc
 ├── covers/             # Folder for album images
 └── README.md           # Project description
   Clone the repo
-git clone https://github.com/yourusername/nakshatra-music-app.git
+git clone https://github.com/nakshatra207/MymusicPlayer.git
+
+https://github.com/nakshatra207/MymusicPlayer.git
+
 
 # Navigate into the folder
 cd nakshatra-music-app
