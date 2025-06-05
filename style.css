@@ -1,0 +1,150 @@
+/* === Import Google Fonts for Typography === */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* === Base Styles === */
+body {
+    background-color: antiquewhite; /* Soft beige background for the page */
+}
+
+/* Remove default padding and margin from all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* === Navigation Bar Styles === */
+nav {
+    font-family: 'Ubuntu', sans-serif; /* Applies Ubuntu font to nav */
+}
+
+/* Style for the navigation list */
+nav ul {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center the items */
+    list-style-type: none; /* Remove bullet points */
+    height: 65px; /* Set height for navbar */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+}
+
+/* Space between navbar items */
+nav ul li {
+    padding: 0 12px;
+}
+
+/* Logo image styling */
+.brand img {
+    width: 44px;
+    padding: 0 8px; /* Space between image and text */
+}
+
+/* Logo text styling */
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder; /* Bold text */
+    font-size: 1.3rem; /* Larger font size */
+}
+
+/* === Main Content Container === */
+.container {
+    min-height: 72vh; /* Minimum height = 72% of viewport */
+    background-color: black; /* Fallback background */
+    color: white;
+    font-family: 'Varela Round', sans-serif; /* Rounded font for modern look */
+    display: flex; /* Flex layout for inner items */
+    margin: 23px auto; /* Center the container */
+    width: 70%; /* Responsive width */
+    border-radius: 12px; /* Rounded corners */
+    padding: 34px; /* Inner spacing */
+    background-image: url('bg.jpg'); /* Add background image */
+}
+
+/* === Bottom Music Player Bar === */
+.bottom {
+    position: sticky;
+    bottom: 0; /* Stick to the bottom */
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    flex-direction: column;  /* Stack children vertically */
+}
+
+/* === Music Control Icons (play/pause/next) === */
+.icons {
+    margin-top: 14px; /* Add spacing above */
+}
+
+.icons i {
+    cursor: pointer; /* Make icons clickable */
+}
+
+/* === Progress Bar (Seek Bar) === */
+#myProgressBar {
+    width: 80vw; /* Responsive width */
+    cursor: pointer; /* Show pointer on hover */
+}
+
+/* === Song List Section === */
+.songItemContainer {
+    margin-top: 74px; /* Spacing from top title */
+}
+
+/* Each individual song block */
+.songItem {
+    height: 50px;
+    display: flex; /* Horizontal layout */
+    background-color: white; /* White song block */
+    color: black; /* Song text in black */
+    margin: 12px 0; /* Vertical spacing between songs */
+    justify-content: space-between; /* Space out elements */
+    align-items: center; /* Center items vertically */
+    border-radius: 34px; /* Pill-shaped blocks */
+}
+
+/* Thumbnail image inside song block */
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px; /* Make it circular */
+}
+
+/* Timestamp section (duration + play icon) */
+.timestamp {
+    margin: 0 23px;
+}
+
+/* Make play icon inside timestamp clickable */
+.timestamp i {
+    cursor: pointer;
+}
+
+/* === Now Playing Info Box === */
+.songInfo {
+    position: absolute; /* Float it over the UI */
+    left: 10vw; /* From the left edge */
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Animation GIF styling */
+.songInfo img {
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.4s ease-in; /* Smooth fade in/out */
+}
+
+/* === Responsive Design for Smaller Screens === */
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red; /* Just for testing - changes bg to red */
+    }
+}
+#volDown, #volUp {
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: white;
+}

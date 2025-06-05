@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- Declares this as an HTML5 document -->
+<html lang="en">
+<head>
+    <!-- Sets character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Makes site compatible with Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Ensures proper scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title shown in browser tab -->
+    <title>Nakshatra's Music app</title>
+
+    <!-- Link to main stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player-styles.css">
+</head>
+<body>
+
+    <!-- Navigation bar at the top of the page -->
+    <nav>
+        <ul>
+            <!-- Brand logo and title -->
+            <li class="brand">
+                <img src="logo.png" alt="Nakshatra's Music Player"> 
+                Nakshatra's Music Player
+            </li>
+            <!-- Navigation links -->
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <!-- Main container for the song list -->
+    <div class="container">
+        <div class="songList">
+            <h1>Best of My favourites - No Copyright Sounds</h1>
+
+            <!-- Container for all individual song items -->
+            <div class="songItemContainer">
+
+                <!-- Individual song blocks (repeat for each song) -->
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Ram Siya Ram</span>
+                    <!-- Play button and song duration -->
+                    <span class="songlistplay">
+                        <span class="timestamp">04:26 
+                            <i id="0" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Jaane nahi denge tujhe</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">3:33 
+                            <i id="1" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Zamana Laage</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:17 
+                            <i id="2" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Qayamat</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">02:45 
+                            <i id="3" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Ishq Hai Zindagi</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">07:00 
+                            <i id="4" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Badass Ravikumar</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">00:50 
+                            <i id="5" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Jaane tu</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:45 
+                            <i id="6" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Meri Aashiqui</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">04:41 
+                            <i id="7" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Lut Gaye</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">03:49 
+                            <i id="8" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Hawa Banke</span>
+                    <span class="songlistplay">
+                        <span class="timestamp">02:45 
+                            <i id="9" class="far songItemPlay fa-play-circle"></i> 
+                        </span>
+                    </span>
+                </div>
+
+            </div> <!-- End of songItemContainer -->
+        </div> <!-- End of songList -->
+
+        <!-- Placeholder for banner or artwork -->
+        <div class="songBanner"></div>
+    </div> <!-- End of container -->
+
+    <!-- Bottom music control panel -->
+    <div class="bottom">
+
+        <!-- Song progress bar -->
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+
+        <!-- Music control buttons -->
+        <div class="icons">
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+
+            <!-- Volume control buttons -->
+            <!-- Decrease volume by 10% -->
+            <i class="fas fa-volume-down" id="volDown" title="Volume Down"></i>
+            
+            <!-- Increase volume by 10% -->
+            <i class="fas fa-volume-up" id="volUp" title="Volume Up"></i>
+        </div>
+
+        <!-- Display current song and animation -->
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> 
+            <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>
+    </div>
+
+    <!-- JavaScript files for functionality -->
+    <script src="player.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Font Awesome icons kit -->
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</body>
+</html>
