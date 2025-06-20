@@ -204,3 +204,6 @@ For issues, questions, or contributions:
 ---
 
 **Built with modern web technologies for an exceptional music listening experience.**
+Deployed this application on vercel :-
+here's the link of the app:-
+https://mymusicplayer-kappa.vercel.app/
